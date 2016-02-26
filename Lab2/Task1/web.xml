@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <display-name>SimpleServlet</display-name>
+  <description>Part 1 of Lab 2</description>
+  
+  <context-param>
+      <param-name>xml_name</param-name>
+      <param-value>lab2.xml</param-value>
+      <description>Name for the XML file</description>
+    </context-param>
+  
+  <servlet>
+    <servlet-name>PostCoderServlet</servlet-name>
+    <servlet-class>PostCoderServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>GetCodersServlet</servlet-name>
+    <servlet-class>GetCodersServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>PostCoderServlet</servlet-name>
+    <url-pattern>/post_coder</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetCodersServlet</servlet-name>
+    <url-pattern>/get_coders</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>
