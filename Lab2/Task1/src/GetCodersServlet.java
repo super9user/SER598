@@ -23,8 +23,6 @@ public class GetCodersServlet extends javax.servlet.http.HttpServlet {
         contextPath = System.getProperty("catalina.home");
         String xmlName = getServletContext().getInitParameter("xml_name");
         wrapper = new XMLWrapper(contextPath + xmlName);
-        System.out.println("--------------- 111111 " + contextPath);
-        System.out.println("--------------- 222222 " + System.getProperty("catalina.base"));
     }
 	
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
